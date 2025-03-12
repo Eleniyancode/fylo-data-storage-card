@@ -1,0 +1,283 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: hsl(228, 56%, 26%) url(./images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /* border: 2px solid firebrick; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* whole container style */
+
+.container {
+  /* border: 2px solid saddlebrown; */
+  width: 100%;
+  max-width: 60em;
+  padding: 20px;
+}
+
+/* main container style */
+main {
+  /* border: 2px solid goldenrod; */
+  display: grid;
+  grid-template-rows: 220px 180px;
+  gap: 20px;
+}
+
+/* first section style */
+.first-section {
+ padding: 60px;
+ background-color: hsl(228, 56%, 26%);
+ border-radius: 10px;
+ border-top-right-radius: 120px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background: hsl(229, 57%, 11%);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* second section style */
+
+.second-section {
+  padding: 20px;
+  /* border: 2px solid  forestgreen; */
+  text-align: center;
+  color: hsl(229, 7%, 55%);
+  border-radius: 10px;
+  background-color: hsl(228, 56%, 26%);
+}
+
+.storage-capacity {
+  height: 20px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 2px;
+}
+
+.storage-used {
+  height: 100%;
+  width: 80%;
+  background: linear-gradient(45deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 20px;
+  padding-right: 3px;
+}
+
+.storage-point {
+  height: 100%;
+  width: 5%;
+  background-color: white;
+  border-radius: 50%;
+  justify-self: end;
+}
+
+.min-max {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(243, 100%, 93%);
+}
+
+.storage-left {
+  width: 50%;
+  height: 5em;
+  background-color: white;
+  justify-self: center;
+  margin-top: 15px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.storage-value {
+  font-size: 2.5em;
+  /* font-weight: 700; */
+  color: hsl(229, 57%, 11%);
+  /* border: 2px solid black; */
+  height: 100%;
+  margin-top: 19px;
+}
+.unit {
+  /* border: 2px solid black; */
+  height: 100%;
+  /* text-align: center; */
+  /* justify-content: center; */
+  align-content: end;
+}
+
+@media (min-width: 40em) {
+
+    body {
+      background: hsl(229, 57%, 11%) url(./images/bg-desktop.png);
+      background-position: 40% bottom;
+      background-repeat: no-repeat;
+      background-size: 100vw;
+    }
+
+    main {
+      /* border: 2px solid goldenrod; */
+      display: grid;
+      grid-template-columns: 40% 57%;
+      grid-template-rows: 200px;
+      gap: 20px;
+    }
+
+    .second-section {
+      height: 150px;
+      margin-top: 50px;
+      position: relative;
+    }
+
+    .storage-left {
+      position: absolute;
+      top: -70px;
+      left: 300px;
+      width: 35%;
+    }
+
+    .first-p {
+      text-align: left;
+      /* background-color: black; */
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 50px solid white;
+      transform: rotate(270deg);
+      position: absolute;
+      top: -15px;
+      left: 417px
+    }
+
+  
+}
+
+
+
+
+
+
