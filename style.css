@@ -92,6 +92,27 @@ textarea:not([rows]) {
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Global Variables */
+:root {
+  /* Colors */
+
+  /* Primary */
+  --Gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  ;
+
+  /* Neutral */
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+
+  /* Fonts */
+  --font-family: "Raleway", sans-serif;
+  --font-wght-400: 400;
+  --font-wght-700: 700;
+  --Font-size: 14px;
+}
+
 
 
 html, body {
@@ -105,10 +126,7 @@ body {
   background-position: center;
   background-size: cover;
   font-size: 15px;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+ font-family: var(--font-family);
   /* border: 2px solid firebrick; */
   display: flex;
   justify-content: center;
@@ -130,6 +148,7 @@ main {
   display: grid;
   grid-template-rows: 220px 180px;
   gap: 20px;
+  font-family: var(--font-family);
 }
 
 /* first section style */
@@ -164,6 +183,10 @@ button {
   color: hsl(229, 7%, 55%);
   border-radius: 10px;
   background-color: hsl(228, 56%, 26%);
+  font-family: "Raleway" sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .storage-capacity {
@@ -211,6 +234,10 @@ button {
 }
 
 .storage-value {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
   font-size: 2.5em;
   /* font-weight: 700; */
   color: hsl(229, 57%, 11%);
@@ -232,7 +259,12 @@ button {
       background: hsl(229, 57%, 11%) url(./images/bg-desktop.png);
       background-position: 40% bottom;
       background-repeat: no-repeat;
-      background-size: 100vw;
+      background-size: 100% 50vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 60em;
     }
 
     main {
@@ -247,12 +279,13 @@ button {
       height: 150px;
       margin-top: 50px;
       position: relative;
+      padding-inline: 40px;
     }
 
     .storage-left {
       position: absolute;
-      top: -70px;
-      left: 300px;
+      top: -60px;
+      left: 280px;
       width: 35%;
     }
 
@@ -269,8 +302,11 @@ button {
       border-bottom: 50px solid white;
       transform: rotate(270deg);
       position: absolute;
-      top: -15px;
-      left: 417px
+      top: -5px;
+      left: 397px
+    }
+    .first-section {
+      padding: 40px;
     }
 
   
